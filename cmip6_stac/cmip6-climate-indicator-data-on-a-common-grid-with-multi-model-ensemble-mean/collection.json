@@ -1,0 +1,153 @@
+{
+  "type": "Collection",
+  "id": "cmip6-climate-indicator-data-on-a-common-grid-with-multi-model-ensemble-mean",
+  "stac_version": "1.1.0",
+  "description": "Climate Indicator data from 13 CMIP6 models on a common grid, including multi-model ensemble mean calculated for each indicator. Models include CESM2, CNRM-CM6-1-HR, E3SM-2-0, EC-Earth3-Veg, GFDL-ESM4, HadGEM3-GC31-LL, HadGEM3-GC31-MM, KACE-1-0-G, MIROC6, MPI-ESM1-2-HR, MRI-ESM2-0, NorESM2-MM, TaiESM1. Scenarios include historical, ssp126, ssp245, ssp370, ssp585. Indicators include rx1day, rx5day, r10mm, cdd, cwd, dw, su, ftc, hd, cd, wsdi, csdi. Multi-model ensemble mean is calculated for each indicator across all available models for each scenario; some indicators do not have data for all models or scenarios.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "CMIP6 Catalog"
+    },
+    {
+      "rel": "item",
+      "href": "./cmip6-climate-indicator-data-on-a-common-grid-with-multi-model-ensemble-mean-item/cmip6-climate-indicator-data-on-a-common-grid-with-multi-model-ensemble-mean-item.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "CMIP6 Catalog"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "time": {
+      "type": "temporal",
+      "extent": [
+        "1950-01-01T00:00:00",
+        "2100-01-01T00:00:00"
+      ]
+    },
+    "lat": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        55.13089005235602,
+        64.55497382198953
+      ],
+      "reference_system": "EPSG:4326",
+      "units": "degrees_north"
+    },
+    "lon": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -147.5,
+        -140.0
+      ],
+      "reference_system": "EPSG:4326",
+      "units": "degrees_east"
+    },
+    "model": {
+      "type": "model",
+      "values": [
+        "CESM2",
+        "CNRM-CM6-1-HR",
+        "E3SM-2-0",
+        "EC-Earth3-Veg",
+        "GFDL-ESM4"
+      ]
+    },
+    "scenario": {
+      "type": "scenario",
+      "values": [
+        "historical",
+        "ssp126",
+        "ssp245"
+      ]
+    }
+  },
+  "cube:variables": {
+    "crs": {
+      "dimensions": [],
+      "type": "data",
+      "nodata": "nan",
+      "data_type": "|S1",
+      "description": "CRS definition",
+      "unit": ""
+    },
+    "rx1day": {
+      "dimensions": [
+        "model",
+        "scenario",
+        "time",
+        "lat",
+        "lon"
+      ],
+      "type": "data",
+      "nodata": "nan",
+      "data_type": "float64",
+      "description": "Yearly Maxmimum 1-day Precipitation",
+      "unit": "mm"
+    },
+    "rx5day": {
+      "dimensions": [
+        "model",
+        "scenario",
+        "time",
+        "lat",
+        "lon"
+      ],
+      "type": "data",
+      "nodata": "nan",
+      "data_type": "float64",
+      "description": "Yearly Maximum 5-day Precipitation",
+      "unit": "mm"
+    },
+    "spatial_ref": {
+      "dimensions": [],
+      "type": "data",
+      "nodata": "nan",
+      "data_type": "int32",
+      "description": "",
+      "unit": ""
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -147.5,
+          55.13089005235602,
+          -140.0,
+          64.55497382198953
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1950-01-01T00:00:00Z",
+          "2100-01-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": "CMIP6, climate",
+  "providers": [
+    {
+      "name": "SNAP",
+      "roles": [
+        "producer",
+        "processor"
+      ],
+      "url": "https://snap.uaf.edu"
+    }
+  ]
+}

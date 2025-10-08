@@ -1,0 +1,25 @@
+{
+  "type": "Catalog",
+  "id": "cmip6-catalog",
+  "stac_version": "1.1.0",
+  "description": "Products derived from CMIP6 data.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json",
+      "title": "CMIP6 Catalog"
+    },
+    {
+      "rel": "child",
+      "href": "./cmip6-monthly-data-on-a-common-grid-with-multi-model-ensemble-mean/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./cmip6-climate-indicator-data-on-a-common-grid-with-multi-model-ensemble-mean/collection.json",
+      "type": "application/json"
+    }
+  ],
+  "title": "CMIP6 Catalog"
+}

@@ -1,0 +1,101 @@
+{
+  "type": "Collection",
+  "id": "test-collection",
+  "stac_version": "1.1.0",
+  "description": "Test collection.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./test-item/test-item.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json"
+  ],
+  "cube:dimensions": {
+    "time": {
+      "type": "temporal",
+      "extent": [
+        "2020-01-01T00:00:00Z",
+        "2020-12-31T23:59:59Z"
+      ],
+      "units": "day"
+    },
+    "lat": {
+      "type": "spatial",
+      "axis": "y",
+      "extent": [
+        50.0,
+        90.0
+      ],
+      "reference_system": "EPSG:4326",
+      "units": "degrees_north"
+    },
+    "lon": {
+      "type": "spatial",
+      "axis": "x",
+      "extent": [
+        -180.0,
+        180.0
+      ],
+      "reference_system": "EPSG:4326",
+      "units": "degrees_east"
+    },
+    "model": {
+      "type": "model",
+      "values": []
+    },
+    "scenario": {
+      "type": "scenario",
+      "values": []
+    }
+  },
+  "cube:variables": {
+    "tas": {
+      "dimensions": [
+        "time",
+        "lat",
+        "lon",
+        "model",
+        "scenario"
+      ],
+      "type": "data",
+      "nodata": "nan",
+      "data_type": "float32",
+      "description": "Surface temperature",
+      "unit": "K"
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other"
+}
