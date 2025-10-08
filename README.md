@@ -1,4 +1,4 @@
-Explore the components of a [STAC catalog](https://stacspec.org/en), and create one from scratch using subsets of of SNAP's CF-compliant data.
+Explore the components of a [STAC catalog](https://stacspec.org/en), and create one from scratch using subsets of SNAP's CF-compliant data.
 
 You will need an environment with `pystac` installed.
 
