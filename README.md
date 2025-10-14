@@ -34,6 +34,8 @@ Use the `example-config.yml` to set up a local instance of the `pygeoapi` that p
 - Or more specific questions about holdings like:
   - At this point / polygon, show me all of the datasets we have?
   - At this point / polygon, show me any datasets that have precipitation data covering all years from 2010-2070, where we have at least 3 models to compare, at finer than 20km resolution?
+
+
 Basically we can ask general questions of the entire data catalog instead of questions about specific coverages. We don’t need a lot of _a priori_ knowledge in order to start asking questions of the entire database. We can do this with Rasdaman coverages, but the workflow is more complex: we would need to list the coverages on the server, query the metadata for each coverage individually, parse the structure of each coverage individually, and gather values from the metadata (if they exist) for validation / filtering based on the query. Since many coverages do not have complete metadata, this would be quite the task.
 
 ## Other users
