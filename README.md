@@ -8,7 +8,7 @@ To run the notebook, you will need an environment with `pystac` installed.
 
 Unzip `cmip6_subsets.zip` and replace the filepaths in the bottom section of the `datacube_to_STAC.ipynb` notebook with your local filepaths. Run the notebook and investigate the outputs. (Alternatively, just view the outputs in the `/stac` and `/cmip6_stac` directories.)
 
-### `pyegoapi`
+### `pygeoapi`
 
 Use the `example-config.yml` to set up a local instance of the `pygeoapi` that points to our STAC. Follow instructions in the `/pygeoapi/README.md` to get started. 
 
